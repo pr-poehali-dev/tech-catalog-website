@@ -154,25 +154,6 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-center mb-4">Почему выбирают нас</h2>
-          <p className="text-center text-slate-600 mb-12 text-lg">Надежный партнер в поставках техники</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center animate-fade-in group cursor-pointer" style={{ animationDelay: `${index * 100}ms` }}>
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-600 via-cyan-600 to-blue-800 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300">
-                  <Icon name={feature.icon} className="text-white" size={32} />
-                </div>
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">{feature.title}</h3>
-                <p className="text-slate-600 text-lg leading-relaxed">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 px-4 bg-slate-50">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-center mb-4">Популярные товары</h2>
@@ -222,7 +203,26 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="reviews" className="py-20 px-4">
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-center mb-4">Почему выбирают нас</h2>
+          <p className="text-center text-slate-600 mb-12 text-lg">Надежный партнер в поставках техники</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center animate-fade-in group cursor-pointer" style={{ animationDelay: `${index * 100}ms` }}>
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-600 via-cyan-600 to-blue-800 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300">
+                  <Icon name={feature.icon} className="text-white" size={32} />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">{feature.title}</h3>
+                <p className="text-slate-600 text-lg leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" className="py-20 px-4 bg-slate-50">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-center mb-4">Отзывы клиентов</h2>
           <p className="text-center text-slate-600 mb-12 text-lg">Более 500 довольных клиентов по всей России</p>
